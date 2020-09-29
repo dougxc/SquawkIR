@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="debug.0" name="ShowBreakpointInNoTracingClass" value="0"/>
+  <property category="debug.0" name="SmartStepSkipStaticInitializers" value="0"/>
+  <property category="debug.0" name="SmartStepSkipSynthetics" value="0"/>
+  <property category="debug.1" name="RemoteDebugLaunch" value="0"/>
+  <property category="debug.1" name="RemoteHost" value="rocs.eng.sun.com"/>
+  <property category="jbuilder.debug"
+    name="ShowBreakpointInNoTracingClass" value="0"/>
+  <property category="jbuilder.debug"
+    name="SmartStepSkipStaticInitializers" value="0"/>
+  <property category="jbuilder.debug" name="SmartStepSkipSynthetics" value="0"/>
+  <property category="runtime" name="ConfigurationCount" value="1"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="com.sun.squawk.irvm.Interpreter"/>
+  <property category="runtime.0" name="application.parameters" value="-classpath api/classes:samples/classes example.mpeg.MPEG"/>
+  <property category="runtime.0" name="test.harness" value="junit.textui.TestRunner"/>
+  <property category="runtime.1" name="ConfigurationName" value="Run example.mpeg.MPEG on rocs"/>
+  <property category="runtime.1" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.1" name="application.class" value="com.sun.squawk.irvm.Interpreter"/>
+  <property category="runtime.1" name="application.parameters" value="-classpath api/classes:samples/classes example.mpeg.MPEG"/>
+  <property category="runtime.1" name="appserver.ejbJarsSaved" value="1"/>
+  <property category="runtime.1" name="appserver.parameters" value="-jts -jns -jss -jdb"/>
+  <property category="runtime.1" name="appserver.servername" value="standard"/>
+  <property category="runtime.1" name="appserver.vmparameters" value="-Dvbroker.agent.port=14000 -Djava.library.path=/BorlandEnterpriseServer/lib:/BorlandEnterpriseServer/bin -Dborland.enterprise.licenseDir=/BorlandEnterpriseServer/var/servers/srmtv29a/adm -Dejb.module_preload=true"/>
+  <property category="runtime.1" name="jsprunner.launchuri" value="/"/>
+  <property category="runtime.1" name="test.harness" value="junit.textui.TestRunner"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="compiler/bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2001"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="compiler/src"/>
+  <property category="sys" name="Description" value="Squawk IR builder and interpreter"/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="compiler/javadoc/html"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="GenerateSourceToOutDir" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="JDK" value="java 1.3.1-b24"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value=""/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="compiler/classes"/>
+  <property category="sys" name="SourcePath" value="compiler/src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value="Squawk"/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <node name="com" type="Folder">
+    <node name="sun" type="Folder">
+      <node name="squawk" type="Folder">
+        <node name="irvm" type="Folder">
+          <file path="compiler/src/com/sun/squawk/irvm/ActivationObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/ArrayObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/BasicObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/GlobalObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/InstanceObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/Interpreter.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/MonitorHashcode.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/Native.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/RecordObject.java"/>
+        </node>
+        <node name="runtime" type="Folder">
+          <node name="ir" type="Folder">
+            <file path="compiler/src/com/sun/squawk/runtime/ir/ArithmeticOp.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/ArrayLength.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/BytecodeAddress.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/CheckCast.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/ConvertOp.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/DropLocal.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Goto.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/HandlerEndPoint.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/HandlerEnter.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/HandlerExit.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/HandlerStartPoint.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/IfOp.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/InitializeClass.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/InstanceOf.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Instruction.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/InstructionVisitor.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Invoke.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadConstant.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadException.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadField.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadIndexed.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadLocal.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Local.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LookupSwitch.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/MethodHeader.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/MonitorEnter.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/MonitorExit.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/NegateOp.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/NewArray.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/NewMultiArray.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/NewObject.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/ParameterVisitor.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Phi.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Return.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/StoreField.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/StoreIndexed.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/StoreLocal.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/TableSwitch.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Target.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/TemporaryLocal.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Throw.java"/>
+          </node>
+          <node name="loader" type="Folder">
+            <file path="compiler/src/com/sun/squawk/runtime/loader/AddressVector.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/BytecodeHolder.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/BytecodeInputStream.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/ClassFileInputStream.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/ClassFileLoader.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/ConstantPool.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/GraphBuilder.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/GraphOptimizer.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/GraphPrinter.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/InputContext.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/InstructionTracer.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/LimitInputStream.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/LocalVector.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/StackMap.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/TypeProxy.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/VerificationException.java"/>
+          </node>
+          <node name="util" type="Folder">
+            <file path="compiler/src/com/sun/squawk/runtime/util/ArrayHashtable.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/BaseFunctions.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/Comparer.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/IntHashtable.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/QuickSorter.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/RuntimeConstants.java"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+</project>

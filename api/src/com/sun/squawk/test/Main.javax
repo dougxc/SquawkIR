@@ -1,0 +1,126 @@
+
+package com.sun.squawk.test;
+import  com.sun.squawk.runtime.util.*;
+
+
+
+
+class Main extends BaseFunctions {
+
+    static float floatfoo;
+
+    public static void main(String[] args) throws Throwable {
+        String classPath = ".";
+        String mainClass;
+        String vmArgs[];
+        int i = 0;
+prtn("hello");
+        for ( ; i < args.length ; i++) {
+prtn(args[i]);
+            if (args[i].charAt(0) != '-') {
+                break;
+            }
+            if (args[i].equals("-cp")) {
+                classPath = args[++i];
+                continue;
+            } else {
+                throw fatal("Bad switch "+args[i]);
+            }
+        }
+
+        mainClass = args[i];
+        vmArgs = new String[args.length - i];
+        System.arraycopy(vmArgs, 0, args, i, vmArgs.length);
+
+        Double d = new Double(
+                                  (i>0)
+                                  ? (
+                                      (i>1)
+                                      ? 2.0
+                                      : 3.0
+                                    )
+                                  : (
+                                      (i>2)
+                                      ? 4.0
+                                      : (
+                                          (i>3)
+                                          ? 5.0
+                                          : foo6((i>4) ? 6 : (i&=7))
+                                        )
+                                    )
+                             );
+
+        try {
+            try {
+                new Main();
+            } catch(Exception t) {
+                throw t;
+            }
+        } catch(Throwable t) {
+            throw t;
+        }
+    }
+
+    static double foo6(int x) {
+        return 6.0;
+    }
+
+
+    static synchronized int staticSync() {
+        return 1;
+    }
+
+    synchronized int virtSync() {
+        return 2;
+    }
+
+ //   static synchronized int staticSync2() {
+ //       synchronized(this) {
+ //           return 3;
+ //       }
+ //   }
+
+    synchronized int virtSync2() {
+        synchronized(this) {
+            int x = 4;
+            synchronized(this) {
+                return x;
+            }
+        }
+    }
+
+}
+
+
+/*
+    t3&         = new Ljava/lang/Double;
+    t7L         = const(1.0D)
+    t1          = l3
+    t2          = const(0)
+    if t1 >= t2    goto 147
+    t1          = l3
+    t2          = const(1)
+    if t2 >= t1    goto 141
+    t8L         = const(2.0D)
+    goto 174
+141:
+    t8L         = const(3.0D)
+    goto 174
+147:
+    t1          = l3
+    t2          = const(2)
+    if t2 >= t1    goto 159
+    t8L         = const(4.0D)
+    goto 174
+159:
+    t1          = l3
+    t2          = const(3)
+    if t2 >= t1    goto 171
+    t8L         = const(5.0D)
+    goto 174
+171:
+    t8L         = const(6.0D)
+174: phi t8L = 4 sources
+    t7L         = t8L * t7L
+    invoke <init>  t3& t7L
+*/

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="debug.0" name="RemoteDebugLaunch" value="0"/>
+  <property category="debug.0" name="RemoteHost" value="rocs.eng.sun.com"/>
+  <property category="debug.0" name="ShowBreakpointInNoTracingClass" value="0"/>
+  <property category="debug.0" name="SmartStepSkipStaticInitializers" value="0"/>
+  <property category="debug.0" name="SmartStepSkipSynthetics" value="0"/>
+  <property category="idl" name="ProcessIDL" value="false"/>
+  <property category="jbuilder.debug" name="NewRemoteDebug" value="0"/>
+  <property category="jbuilder.debug" name="RemoteAttachHost" value="rocs.eng.sun.com"/>
+  <property category="jbuilder.debug"
+    name="ShowBreakpointInNoTracingClass" value="0"/>
+  <property category="jbuilder.debug"
+    name="SmartStepSkipStaticInitializers" value="0"/>
+  <property category="jbuilder.debug" name="SmartStepSkipSynthetics" value="0"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="com.sun.squawk.irvm.Interpreter"/>
+  <property category="runtime.0" name="application.parameters" value="-classpath api/classes:samples/classes example.mpeg.MPEG"/>
+  <property category="runtime.0" name="test.harness" value="junit.textui.TestRunner"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="compiler/bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2001"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="compiler/src"/>
+  <property category="sys" name="Description" value="Squawk IR builder and interpreter"/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="compiler/javadoc/html"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="GenerateSourceToOutDir" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="JDK" value="java 1.3.1-b24"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value=""/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="compiler/classes"/>
+  <property category="sys" name="SourcePath" value="compiler/src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value="Squawk"/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <property category="sys" name="enable.auto.packages" value="false"/>
+  <node name="bench" type="Folder">
+    <node name="cubes" type="Folder">
+      <file path="samples/src/bench/cubes/Camera.java"/>
+      <file path="samples/src/bench/cubes/ColorTable.java"/>
+      <file path="samples/src/bench/cubes/CubeCanvas.java"/>
+      <file path="samples/src/bench/cubes/IntegerMath.java"/>
+      <file path="samples/src/bench/cubes/Main.java"/>
+      <file path="samples/src/bench/cubes/MidBench.java"/>
+      <file path="samples/src/bench/cubes/TObject.java"/>
+      <file path="samples/src/bench/cubes/TPoint.java"/>
+      <file path="samples/src/bench/cubes/TPolygon.java"/>
+    </node>
+    <node name="delta" type="Folder">
+      <file path="samples/src/bench/delta/DeltaBlue.java"/>
+      <file path="samples/src/bench/delta/Main.java"/>
+      <file path="samples/src/bench/delta/MidBench.java"/>
+      <file path="samples/src/bench/delta/Program.java"/>
+    </node>
+    <node name="mpeg" type="Folder">
+      <file path="samples/src/bench/mpeg/AudioDecoder.java"/>
+      <file path="samples/src/bench/mpeg/BitStream.java"/>
+      <file path="samples/src/bench/mpeg/BufferedBitStream.java"/>
+      <file path="samples/src/bench/mpeg/BufferQueue.java"/>
+      <file path="samples/src/bench/mpeg/ByteBuffer.java"/>
+      <file path="samples/src/bench/mpeg/Displayable.java"/>
+      <file path="samples/src/bench/mpeg/DisplayPanel.java"/>
+      <file path="samples/src/bench/mpeg/GOPFormatException.java"/>
+      <file path="samples/src/bench/mpeg/GroupFormatException.java"/>
+      <file path="samples/src/bench/mpeg/IDCT.java"/>
+      <file path="samples/src/bench/mpeg/MacroBlock.java"/>
+      <file path="samples/src/bench/mpeg/Main.java"/>
+      <file path="samples/src/bench/mpeg/MidBench.java"/>
+      <file path="samples/src/bench/mpeg/MotionVector.java"/>
+      <file path="samples/src/bench/mpeg/MPEGMidlet.java"/>
+      <file path="samples/src/bench/mpeg/PacketFormatException.java"/>
+      <file path="samples/src/bench/mpeg/Picture.java"/>
+      <file path="samples/src/bench/mpeg/PictureFormatException.java"/>
+      <file path="samples/src/bench/mpeg/SequenceFormatException.java"/>
+      <file path="samples/src/bench/mpeg/StopBenchmarkException.java"/>
+      <file path="samples/src/bench/mpeg/SystemDecoder.java"/>
+      <file path="samples/src/bench/mpeg/TableInputStream.java"/>
+      <file path="samples/src/bench/mpeg/Trace.java"/>
+      <file path="samples/src/bench/mpeg/VideoDecoder.java"/>
+    </node>
+  </node>
+  <node name="com" type="Folder">
+    <node name="sun" type="Folder">
+      <node name="squawk" type="Folder">
+        <node name="irvm" type="Folder">
+          <file path="compiler/src/com/sun/squawk/irvm/ActivationObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/ArrayObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/BasicObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/GlobalObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/InstanceObject.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/Interpreter.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/MonitorHashcode.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/Native.java"/>
+          <file path="compiler/src/com/sun/squawk/irvm/RecordObject.java"/>
+        </node>
+        <node name="runtime" type="Folder">
+          <node name="ir" type="Folder">
+            <file path="compiler/src/com/sun/squawk/runtime/ir/ArithmeticOp.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/ArrayLength.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/BytecodeAddress.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/CheckCast.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/ConvertOp.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/DropLocal.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Goto.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/HandlerEndPoint.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/HandlerEnter.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/HandlerExit.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/HandlerStartPoint.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/IfOp.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/InitializeClass.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/InstanceOf.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Instruction.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/InstructionVisitor.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Invoke.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadConstant.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadException.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadField.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadIndexed.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LoadLocal.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Local.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/LookupSwitch.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/MethodHeader.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/MonitorEnter.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/MonitorExit.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/NegateOp.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/NewArray.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/NewMultiArray.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/NewObject.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/ParameterVisitor.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Phi.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Return.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/StoreField.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/StoreIndexed.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/StoreLocal.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/TableSwitch.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Target.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/TemporaryLocal.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/ir/Throw.java"/>
+          </node>
+          <node name="loader" type="Folder">
+            <file path="compiler/src/com/sun/squawk/runtime/loader/AddressVector.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/BytecodeHolder.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/BytecodeInputStream.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/ClassFileInputStream.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/ClassFileLoader.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/ConstantPool.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/GraphBuilder.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/GraphOptimizer.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/GraphPrinter.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/InputContext.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/InstructionTracer.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/LimitInputStream.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/LocalVector.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/StackMap.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/TypeProxy.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/loader/VerificationException.java"/>
+          </node>
+          <node name="util" type="Folder">
+            <file path="compiler/src/com/sun/squawk/runtime/util/ArrayHashtable.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/BaseFunctions.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/Comparer.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/IntHashtable.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/QuickSorter.java"/>
+            <file path="compiler/src/com/sun/squawk/runtime/util/RuntimeConstants.java"/>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node name="example" type="Folder">
+    <node name="chess" type="Folder">
+      <file path="samples/src/example/chess/0-b.gif"/>
+      <file path="samples/src/example/chess/0-w.gif"/>
+      <file path="samples/src/example/chess/b.empty.gif"/>
+      <file path="samples/src/example/chess/bb-b.gif"/>
+      <file path="samples/src/example/chess/bb-w.gif"/>
+      <file path="samples/src/example/chess/bb.bishop.gif"/>
+      <file path="samples/src/example/chess/bb.king.gif"/>
+      <file path="samples/src/example/chess/bb.knight.gif"/>
+      <file path="samples/src/example/chess/bb.pawn.gif"/>
+      <file path="samples/src/example/chess/bb.queen.gif"/>
+      <file path="samples/src/example/chess/bb.rook.gif"/>
+      <file path="samples/src/example/chess/bk-b.gif"/>
+      <file path="samples/src/example/chess/bk-w.gif"/>
+      <file path="samples/src/example/chess/bn-b.gif"/>
+      <file path="samples/src/example/chess/bn-w.gif"/>
+      <file path="samples/src/example/chess/Board.java"/>
+      <file path="samples/src/example/chess/BoardDisplay.java"/>
+      <file path="samples/src/example/chess/bp-b.gif"/>
+      <file path="samples/src/example/chess/bp-w.gif"/>
+      <file path="samples/src/example/chess/bq-b.gif"/>
+      <file path="samples/src/example/chess/bq-w.gif"/>
+      <file path="samples/src/example/chess/br-b.gif"/>
+      <file path="samples/src/example/chess/br-w.gif"/>
+      <file path="samples/src/example/chess/br.bishop.gif"/>
+      <file path="samples/src/example/chess/br.king.gif"/>
+      <file path="samples/src/example/chess/br.knight.gif"/>
+      <file path="samples/src/example/chess/br.pawn.gif"/>
+      <file path="samples/src/example/chess/br.queen.gif"/>
+      <file path="samples/src/example/chess/br.rook.gif"/>
+      <file path="samples/src/example/chess/ChessEvaluator.java"/>
+      <file path="samples/src/example/chess/ChessGenerator.java"/>
+      <file path="samples/src/example/chess/Game.java"/>
+      <file path="samples/src/example/chess/game2.html"/>
+      <file path="samples/src/example/chess/Generator.java"/>
+      <file path="samples/src/example/chess/HashTable.java"/>
+      <file path="samples/src/example/chess/Move.java"/>
+      <file path="samples/src/example/chess/PV.java"/>
+      <file path="samples/src/example/chess/r.empty.gif"/>
+      <file path="samples/src/example/chess/RandomX.java"/>
+      <file path="samples/src/example/chess/rb.bishop.gif"/>
+      <file path="samples/src/example/chess/rb.king.gif"/>
+      <file path="samples/src/example/chess/rb.knight.gif"/>
+      <file path="samples/src/example/chess/rb.pawn.gif"/>
+      <file path="samples/src/example/chess/rb.queen.gif"/>
+      <file path="samples/src/example/chess/rb.rook.gif"/>
+      <file path="samples/src/example/chess/rr.bishop.gif"/>
+      <file path="samples/src/example/chess/rr.king.gif"/>
+      <file path="samples/src/example/chess/rr.knight.gif"/>
+      <file path="samples/src/example/chess/rr.pawn.gif"/>
+      <file path="samples/src/example/chess/rr.queen.gif"/>
+      <file path="samples/src/example/chess/rr.rook.gif"/>
+      <file path="samples/src/example/chess/SBE.java"/>
+      <file path="samples/src/example/chess/Statistics.java"/>
+      <file path="samples/src/example/chess/wb-b.gif"/>
+      <file path="samples/src/example/chess/wb-w.gif"/>
+      <file path="samples/src/example/chess/wk-b.gif"/>
+      <file path="samples/src/example/chess/wk-w.gif"/>
+      <file path="samples/src/example/chess/wn-b.gif"/>
+      <file path="samples/src/example/chess/wn-w.gif"/>
+      <file path="samples/src/example/chess/wp-b.gif"/>
+      <file path="samples/src/example/chess/wp-w.gif"/>
+      <file path="samples/src/example/chess/wq-b.gif"/>
+      <file path="samples/src/example/chess/wq-w.gif"/>
+      <file path="samples/src/example/chess/wr-b.gif"/>
+      <file path="samples/src/example/chess/wr-w.gif"/>
+    </node>
+    <node name="cubes" type="Folder">
+      <file path="samples/src/example/cubes/Camera.java"/>
+      <file path="samples/src/example/cubes/ColorTable.java"/>
+      <file path="samples/src/example/cubes/CubeCanvas.java"/>
+      <file path="samples/src/example/cubes/Cubes.java"/>
+      <file path="samples/src/example/cubes/IntegerMath.java"/>
+      <file path="samples/src/example/cubes/TObject.java"/>
+      <file path="samples/src/example/cubes/TPoint.java"/>
+      <file path="samples/src/example/cubes/TPolygon.java"/>
+    </node>
+    <node name="icons" type="Folder">
+      <file path="samples/src/example/icons/App.gif"/>
+      <file path="samples/src/example/icons/App.png"/>
+      <file path="samples/src/example/icons/Auction.gif"/>
+      <file path="samples/src/example/icons/Auction.png"/>
+      <file path="samples/src/example/icons/ColorChooser.gif"/>
+      <file path="samples/src/example/icons/ColorChooser.png"/>
+      <file path="samples/src/example/icons/Duke.gif"/>
+      <file path="samples/src/example/icons/Duke.png"/>
+      <file path="samples/src/example/icons/JavaPowered-2.gif"/>
+      <file path="samples/src/example/icons/JavaPowered-2.png"/>
+      <file path="samples/src/example/icons/JavaPowered-8.gif"/>
+      <file path="samples/src/example/icons/JavaPowered-8.png"/>
+      <file path="samples/src/example/icons/ManyBalls.gif"/>
+      <file path="samples/src/example/icons/ManyBalls.png"/>
+      <file path="samples/src/example/icons/PhotoAlbum.png"/>
+      <file path="samples/src/example/icons/Pong.png"/>
+      <file path="samples/src/example/icons/PushPuzzle.gif"/>
+      <file path="samples/src/example/icons/PushPuzzle.png"/>
+      <file path="samples/src/example/icons/SpaceInvaders.png"/>
+      <file path="samples/src/example/icons/StarCruiser.png"/>
+      <file path="samples/src/example/icons/Stock.gif"/>
+      <file path="samples/src/example/icons/Stock.png"/>
+      <file path="samples/src/example/icons/TilePuzzle.gif"/>
+      <file path="samples/src/example/icons/TilePuzzle.png"/>
+    </node>
+    <node name="kawtdemo" type="Folder">
+      <file path="samples/src/example/kawtdemo/KawtDemo.java"/>
+    </node>
+    <node name="manyballs" type="Folder">
+      <file path="samples/src/example/manyballs/ManyBalls.java"/>
+      <file path="samples/src/example/manyballs/ManyCanvas.java"/>
+      <file path="samples/src/example/manyballs/SmallBall.java"/>
+    </node>
+    <node name="mpeg" type="Folder">
+      <file path="samples/src/example/mpeg/AudioDecoder.java"/>
+      <file path="samples/src/example/mpeg/BitStream.java"/>
+      <file path="samples/src/example/mpeg/BufferedBitStream.java"/>
+      <file path="samples/src/example/mpeg/BufferQueue.java"/>
+      <file path="samples/src/example/mpeg/ByteBuffer.java"/>
+      <file path="samples/src/example/mpeg/Displayable.java"/>
+      <file path="samples/src/example/mpeg/DisplayPanel.java"/>
+      <file path="samples/src/example/mpeg/GOPFormatException.java"/>
+      <file path="samples/src/example/mpeg/GroupFormatException.java"/>
+      <file path="samples/src/example/mpeg/IDCT.java"/>
+      <file path="samples/src/example/mpeg/MacroBlock.java"/>
+      <file path="samples/src/example/mpeg/MotionVector.java"/>
+      <file path="samples/src/example/mpeg/MPEG.java"/>
+      <file path="samples/src/example/mpeg/PacketFormatException.java"/>
+      <file path="samples/src/example/mpeg/Picture.java"/>
+      <file path="samples/src/example/mpeg/PictureFormatException.java"/>
+      <file path="samples/src/example/mpeg/SequenceFormatException.java"/>
+      <file path="samples/src/example/mpeg/SystemDecoder.java"/>
+      <file path="samples/src/example/mpeg/VideoDecoder.java"/>
+    </node>
+    <node name="pong" type="Folder">
+      <file path="samples/src/example/pong/Pong.java"/>
+      <file path="samples/src/example/pong/PongBall.java"/>
+      <file path="samples/src/example/pong/PongCourt.java"/>
+      <file path="samples/src/example/pong/PongPaddle.java"/>
+    </node>
+    <node name="spaceinv" type="Folder">
+      <file path="samples/src/example/spaceinv/Engine.java"/>
+      <file path="samples/src/example/spaceinv/Fleet.java"/>
+      <file path="samples/src/example/spaceinv/Images.java"/>
+      <file path="samples/src/example/spaceinv/Pixelator.java"/>
+      <file path="samples/src/example/spaceinv/Score.java"/>
+      <file path="samples/src/example/spaceinv/Shield.java"/>
+      <file path="samples/src/example/spaceinv/SpaceInvaders.java"/>
+      <file path="samples/src/example/spaceinv/SpaceScreen.java"/>
+      <file path="samples/src/example/spaceinv/Sprite.java"/>
+    </node>
+    <node name="tilepuzzle" type="Folder">
+      <file path="samples/src/example/tilepuzzle/Board.java"/>
+      <file path="samples/src/example/tilepuzzle/Options.java"/>
+      <file path="samples/src/example/tilepuzzle/TilePuzzle.java"/>
+    </node>
+    <node name="wormgame" type="Folder">
+      <file path="samples/src/example/wormgame/Worm.java"/>
+      <file path="samples/src/example/wormgame/WormException.java"/>
+      <file path="samples/src/example/wormgame/WormFood.java"/>
+      <file path="samples/src/example/wormgame/WormLink.java"/>
+      <file path="samples/src/example/wormgame/WormMain.java"/>
+      <file path="samples/src/example/wormgame/WormPit.java"/>
+      <file path="samples/src/example/wormgame/WormScore.java"/>
+    </node>
+  </node>
+  <node name="javax" type="Folder">
+    <node name="microedition" type="Folder">
+      <node name="lcdui" type="Folder">
+        <file path="samples/src/javax/microedition/lcdui/Alert.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Canvas.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Choice.java"/>
+        <file path="samples/src/javax/microedition/lcdui/ChoiceGroup.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Command.java"/>
+        <file path="samples/src/javax/microedition/lcdui/CommandListener.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Display.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Displayable.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Font.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Form.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Gauge.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Graphics.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Image.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Item.java"/>
+        <file path="samples/src/javax/microedition/lcdui/List.java"/>
+        <file path="samples/src/javax/microedition/lcdui/MojoRepainter.java"/>
+        <file path="samples/src/javax/microedition/lcdui/Screen.java"/>
+        <file path="samples/src/javax/microedition/lcdui/SoftButtonMenu.java"/>
+        <file path="samples/src/javax/microedition/lcdui/StringItem.java"/>
+        <file path="samples/src/javax/microedition/lcdui/TextBox.java"/>
+        <file path="samples/src/javax/microedition/lcdui/TextField.java"/>
+      </node>
+      <node name="midlet" type="Folder">
+        <file path="samples/src/javax/microedition/midlet/MIDlet.java"/>
+        <file path="samples/src/javax/microedition/midlet/MIDletStateChangeException.java"/>
+      </node>
+      <node name="rms" type="Folder">
+        <file path="samples/src/javax/microedition/rms/Connector.java"/>
+        <file path="samples/src/javax/microedition/rms/InvalidRecordIDException.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordComparator.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordEnumeration.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordEnumerationImpl.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordFilter.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordListener.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordStore.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordStoreException.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordStoreFile.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordStoreFullException.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordStoreNotFoundException.java"/>
+        <file path="samples/src/javax/microedition/rms/RecordStoreNotOpenException.java"/>
+      </node>
+    </node>
+  </node>
+  <node name="mojo" type="Folder">
+    <file path="samples/src/mojo/Main.java"/>
+    <file path="samples/src/mojo/MojoScreen.java"/>
+    <file path="samples/src/mojo/SoftButtonPanel.java"/>
+    <file path="samples/src/mojo/Test.java"/>
+  </node>
+</project>

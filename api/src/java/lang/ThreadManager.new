@@ -1,0 +1,119 @@
+/*
+ * Copyright 1994-2001 Sun Microsystems, Inc. All Rights Reserved.
+ *
+ * This software is the proprietary information of Sun Microsystems, Inc.
+ * Use is subject to license terms.
+ *
+ */
+
+package java.lang;
+
+public class ThreadManager {
+
+
+    static Thread currentThread;
+
+    /**
+     * Returns a reference to the currently executing thread object.
+     *
+     * @return  the currently executing thread.
+     */
+    public static Thread currentThread() {
+        return currentThread;
+    }
+
+    /**
+     * Causes the currently executing thread object to temporarily pause
+     * and allow other threads to execute.
+     */
+    public static void yield() {
+    }
+
+    /**
+     * Causes the currently executing thread to sleep (temporarily cease
+     * execution) for the specified number of milliseconds. The thread
+     * does not lose ownership of any monitors.
+     *
+     * @param      millis   the length of time to sleep in milliseconds.
+     * @exception  InterruptedException if another thread has interrupted
+     *             the current thread.  The <i>interrupted status</i> of the
+     *             current thread is cleared when this exception is thrown.
+     * @see        java.lang.Object#notify()
+     */
+    public static void sleep(long millis) throws InterruptedException {
+    }
+
+    /**
+     * Causes this thread to begin execution; the Java Virtual Machine
+     * calls the <code>run</code> method of this thread.
+     * <p>
+     * The result is that two threads are running concurrently: the
+     * current thread (which returns from the call to the
+     * <code>start</code> method) and the other thread (which executes its
+     * <code>run</code> method).
+     *
+     * @exception  IllegalThreadStateException  if the thread was already
+     *               started.
+     * @see        java.lang.Thread#run()
+     */
+    public static void start(Thread thread) {
+    }
+
+    /**
+     * Tests if this thread is alive. A thread is alive if it has
+     * been started and has not yet died.
+     *
+     * @return  <code>true</code> if this thread is alive;
+     *          <code>false</code> otherwise.
+     */
+    public static boolean isAlive(Thread thread) {
+    }
+
+    /**
+     * Changes the priority of this thread.
+     *
+     * @param newPriority priority to set this thread to
+     * @exception  IllegalArgumentException  If the priority is not in the
+     *             range <code>MIN_PRIORITY</code> to
+     *             <code>MAX_PRIORITY</code>.
+     * @see        #getPriority
+     * @see        java.lang.Thread#getPriority()
+     * @see        java.lang.Thread#MAX_PRIORITY
+     * @see        java.lang.Thread#MIN_PRIORITY
+     */
+    public static void newPriority(Thread thread) {
+    }
+
+    /**
+     * Returns the current number of active threads in the VM.
+     *
+     * @return  the current number of threads in this thread's thread group.
+     */
+    public static int activeCount() {
+    }
+
+
+
+    private void callRun() {
+        try {
+            ThreadManger.start(this);
+            run();
+        } finally {
+            ThreadManger.stop(this);
+        }
+    }
+
+
+    private void callMain() {
+        try {
+            ThreadManger.start(this);
+            callMainPrim();
+        } finally {
+            ThreadManger.stop(this);
+        }
+    }
+
+    private native static void callMainPrim();
+}
+
+

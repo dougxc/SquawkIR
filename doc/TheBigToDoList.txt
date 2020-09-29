@@ -1,0 +1,45 @@
+1, Finalize the design of the HTTP based transformer protocol and the XML data structures involved.
+
+2, Design and build the transformer. This probably a couple of weeks for me based
+upon the IRVM. Regular Java attribute security needs to be added. Generalized client and
+server HTTP library code would could be a useful byproduct.
+
+3, Finish the simple interpreter. The current (simple) interpreter has been sketched out to fair degree.
+There are three main areas to be completed:
+
+     * The C/Java core and Java runtime library.
+        Quite a lot of this is written, and some of the new Java library code will
+        also compile. The bulk of the interpreter is written but not compiled. Most
+        of the design of the native code interaction is complete and uses a "plug in"
+        model. A file:// and http:// plug in would be useful.
+        An application model needs to be designed.
+
+     * Simple GC
+        Initially a null GC will suffice. Then a simple cheney collector will be needed.
+
+     * The XML class parser and assembler
+        Very little done, but looks quite small.
+
+     * The Heap creator.
+        Something that will build a prototype heap from output of the transformer. This
+        is used to bootstrap the VM. The prototype heap would just contain classes and
+        methods.
+
+Until the transformer is ready the XML input can be created by hand or hacked up and stored in files.
+
+4, Regression test suite (TCK plus whatever).
+
+5, C version of the system needs testing.
+
+6, The real garbage collector probably based upon the Monty design.
+
+7, Analysis and design of compressed bytecode format. Implementation of storer and loader of
+this code.
+
+8, Analysis of the transformer size, both static and dynamic. Make smaller.
+
+9, Java level debugging system.
+
+10, JIT
+
+11, A file server that works through HTTP.

@@ -1,0 +1,28 @@
+import java.io.*;
+
+public class Cvt {
+
+    public static void main(String[] args) throws Exception {
+        String hex = "0123456789abcdef";
+
+        System.out.print("public class Table {");
+
+        FileInputStream in = new FileInputStream("random.mpg");
+        for (int n = 0 ; ; n++) {
+            System.out.print("    String d"+n+"() { return \"");
+            for (int i = 0 ; i < 1024 ; i++) {
+                int ch = in.read();
+                if (ch == -1) {
+                    System.out.println("\"; }");
+                    System.out.println("}");
+                    System.exit(1);
+                }
+                //System.out.print("");
+                System.out.print(hex.charAt((ch >> 4) & 0xF));
+                System.out.print(hex.charAt((ch >> 0) & 0xF));
+            }
+            System.out.println("\"; }");
+        }
+    }
+
+}

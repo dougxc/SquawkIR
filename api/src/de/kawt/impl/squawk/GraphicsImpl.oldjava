@@ -1,0 +1,174 @@
+
+package de.kawt.impl.squawk;
+
+import java.awt.*;
+import java.util.Vector;
+import java.awt.image.ImageObserver;
+
+public class GraphicsImpl extends Graphics {
+
+    int graphics = 0;
+    Color color = Color.black;
+    FontMetricsImpl fontMetrics = FontMetricsImpl.defaultFontMetrics;
+
+    public GraphicsImpl () {
+        graphics = createGraphics0();
+    }
+
+    public Graphics create () {
+        GraphicsImpl g = new GraphicsImpl();
+        return g;
+    }
+
+    public void clipRect(int x, int y, int w, int h) {
+        clipRect0(graphics, x, y, w, h);
+    }
+
+    public void setClip(int x, int y, int w, int h) {
+        setClip0(graphics, x, y, w, h);
+    }
+
+    public void clearRect(int x, int y, int w, int h) {
+        clearRect0(graphics, x, y, w, h);
+    }
+
+    public boolean drawImage(Image image, int x, int y, ImageObserver observer) {
+        drawImage0(graphics, ((ImageImpl)image).imageIndex, x, y);
+        return true;
+    }
+
+    public void dispose() {
+        dispose0(graphics);
+        graphics = -1;
+    }
+
+
+    public void drawLine(int x1, int y1, int x2, int y2) {
+        drawLine0(graphics, x1, y1, x2, y2);
+    }
+
+    public void drawPolyline (int[] xPoints, int[] yPoints, int nPoints) {
+        for (int i = 0; i < nPoints - 1; i++) {
+            drawLine(xPoints[i], yPoints[i], xPoints[i+1], yPoints[i+1]);
+        }
+    }
+
+    public void drawRoundRect (int x, int y, int width, int height, int arcWidth, int arcHeight) {
+        drawRoundRect0(graphics, x, y, width, height, arcWidth, arcHeight);
+    }
+
+    public void drawString (String text, int x, int y) {
+        drawString0(graphics, text, x, y);
+    }
+
+    public void drawOval(int x, int y, int w, int h) {
+       drawOval0(graphics, x, y, w, h);
+    }
+
+    public void drawRect(int x,  int y, int width, int height) {
+        drawRect0(graphics, x, y, width, height);
+    }
+
+    public void fillRect(int x, int y, int width, int height) {
+       fillRect0(graphics, x, y, width, height);
+    }
+
+    public void fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) {
+        fillRoundRect0(graphics, x, y, width, height, arcWidth, arcHeight);
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public Font getFont() {
+        return fontMetrics.getFont();
+    }
+
+    public Rectangle getClipBounds() {
+        return getClipBounds(new Rectangle (0,0,0,0));
+    }
+
+    public Rectangle getClipBounds(Rectangle r) {
+        r.x      = getClipBoundsX(graphics);
+        r.y      = getClipBoundsY(graphics);
+        r.width  = getClipBoundsW(graphics);
+        r.height = getClipBoundsH(graphics);
+        return r;
+    }
+
+
+    public boolean hitClip(int x, int y, int w, int h) {
+        return hitClip0(graphics, x, y, w, h);
+    }
+
+    public FontMetrics getFontMetrics() {
+        return fontMetrics;
+    }
+
+    public FontMetrics getFontMetrics(Font font) {
+        return FontMetricsImpl.create(font);
+    }
+
+    public void setColor(Color c) {
+        color = c;
+        setColor0(graphics, color.getRGB());
+    }
+
+    public void setFont(Font font) {
+        fontMetrics = FontMetricsImpl.create(font);
+        setFont0(graphics, fontMetrics.fontIndex);
+    }
+
+    public void setPaintMode() {
+    }
+
+    public void setXORMode(Color c2) {
+    }
+
+    public void translate(int x, int y) {
+        translate0(graphics, x, y);
+    }
+
+    public void fillArc(int x, int y, int w, int h, int ba, int ea) {
+        fillArc0(graphics, x, y, w, h, ba, ea);
+    }
+
+    public void fillPolygon(int[] a,int[] b,int c) {
+        fillPolygon0(graphics, a, b, c);
+    }
+
+    private native int     createGraphics0();
+    private native void    clipRect0(int graphics, int x, int y, int w, int h);
+    private native void    setClip0(int graphics, int x, int y, int w, int h);
+    private native void    clearRect0(int graphics, int x, int y, int w, int h);
+    private native void    drawImage0(int graphics, int imageIndex, int x, int y);
+    private native void    dispose0(int graphics);
+    private native void    drawLine0(int graphics, int x1, int y1, int x2, int y2);
+    private native void    drawRoundRect0(int graphics, int x, int y, int width, int height, int arcWidth, int arcHeight);
+    private native void    drawString0(int graphics, String text, int x, int y);
+    private native void    drawOval0(int graphics, int x, int y, int w, int h);
+    private native void    drawRect0(int graphics, int x,  int y, int width, int height);
+    private native void    fillRect0(int graphics, int x, int y, int width, int height);
+    private native void    fillRoundRect0(int graphics, int x, int y, int width, int height, int arcWidth, int arcHeight);
+
+    private native int     getClipBoundsX(int graphics);
+    private native int     getClipBoundsY(int graphics);
+    private native int     getClipBoundsW(int graphics);
+    private native int     getClipBoundsH(int graphics);
+    private native boolean hitClip0(int graphics, int x, int y, int w, int h);
+    private native void    setColor0(int graphics, int rgb);
+    private native void    setFont0(int graphics, int fontIndex);
+    private native void    translate0(int graphics, int x, int y);
+    private native void    fillArc0(int graphics, int x, int y, int w, int h, int ba, int ea);
+    private native void    fillPolygon0(int graphics, int[] a,int[] b,int c);
+
+
+
+}
+
+
+
+
+
+

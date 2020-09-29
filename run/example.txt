@@ -1,0 +1,28 @@
+The following command lines will run the demo programs:
+
+    example.chess.Game
+    example.kawtdemo.KawtDemo
+    example.mpeg.MPEG
+    mojo.Main example.cubes.Cubes
+    mojo.Main example.manyballs.ManyBalls
+    mojo.Main example.pong.Pong
+    mojo.Main example.spaceinv.SpaceInvaders
+    mojo.Main example.tilepuzzle.TilePuzzle
+    mojo.Main example.wormgame.WormMain
+
+The following command lines will run the benchmarks:
+
+    bench.cubes.Main
+    bench.delta.Main
+    bench.mpeg.Main
+
+
+
+
+On Windows prefix with "run" e.g .
+
+    run example.chess.Game
+
+On Unix (or windows with MKS) prefix with "sh run.sh" e.g.
+
+    sh run.sh example.chess.Game

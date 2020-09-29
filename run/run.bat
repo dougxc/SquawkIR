@@ -1,0 +1,1 @@
+java -cp ..\compiler\classes com.sun.squawk.irvm.Interpreter -cp ..\api\classes:..\samples\classes %1 %2 %3 %4 %5 %6 %7 %8 %9

@@ -1,0 +1,1 @@
+java -cp ../compiler/classes com.sun.squawk.irvm.Interpreter -cp ../api/classes:../samples/classes $*
